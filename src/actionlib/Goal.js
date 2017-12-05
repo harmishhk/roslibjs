@@ -30,6 +30,14 @@ function Goal(options) {
   this.goalID = 'goal_' + Math.random() + '_' + date.getTime();
   // Fill in the goal message
   this.goalMessage = new Message({
+    header : {
+      seq: 0,
+      stamp : {
+        secs : 0,
+        nsecs : 0
+      },
+      frame_id: '',
+    },
     goal_id : {
       stamp : {
         secs : 0,
